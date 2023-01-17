@@ -165,7 +165,9 @@ require 'sql.php';
 <body style="margin: 0;padding: 0;outline: none;height: 100%;min-height: 100%;color: #042A38 !important">
     <div style="font-family:'Roboto', sans-serif, monospace;margin: 0;padding: 0;background-color: #fff;height: 100%;width: 100%;padding-bottom: 5vw;background-image: url(images/image.png);height: 100px;background-repeat: no-repeat;background-size:cover;">
         <center>
-            <h1 style="text-transform: uppercase;padding: 2vw;background-color: #fff;color: #042A38;margin-top:0;">Quizzy</h1>
+        <center>
+            <h1 class="w3-container" style=" color:#fff;text-transform: uppercase;width: auto;background-color:#000;border: 2px solid black;opacity: 0.7;padding-top:0%;font-family:  'Roboto', sans-serif;">Quizzy</h1>
+        </center>
         </center>
         <div class="seluser">
             <center> <button onclick="stud()">STUDENT</button><button onclick="staff()">STAFF</button></center>

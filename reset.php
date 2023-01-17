@@ -70,8 +70,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 <body style="margin:0;height: 100%;outline: none;color: #042A38 !important;">
     <div class="bg" style="font-weight: bolder;background-image: url(./images/image.png);background-repeat: no-repeat;padding: 0;margin: 0;background-size: cover;font-family: 'Roboto', sans-serif;opacity: 0.9;height: auto;padding-bottom: 5vw;">
-        <center>
-            <h1 style=" color:#042A38;text-transform: uppercase;width: auto;background:#fff;padding: 1vw;">Quizzy</h1>
+    <center>
+            <h1 class="w3-container" style=" color:#fff;text-transform: uppercase;width: auto;background-color:#000;border: 2px solid black;opacity: 0.7;padding-top:0%;font-family:  'Roboto', sans-serif;">Quizzy</h1>
         </center>
         <center>
             <div class="login">

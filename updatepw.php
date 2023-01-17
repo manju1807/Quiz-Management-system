@@ -36,7 +36,7 @@ $type= $_SESSION["type"]; ?>
 
     ::placeholder {
         font-weight: bold;
-        font-family: 'Courier New', Courier, monospace;
+        font-family: 'Roboto', sans-serif;
     }
 
     label {
@@ -61,11 +61,13 @@ $type= $_SESSION["type"]; ?>
         display: block;
     }
 </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 <body style="margin:0;height: 100%;outline: none;">
-    <div class="bg" style="font-weight: bolder;background-image: url(./images/image.png);background-repeat: no-repeat;padding: 0;margin: 0;background-size: cover;font-family: 'Courier New', Courier, monospace;opacity: 0.9;height: auto;padding-bottom: 5vw;">
+    <div class="bg" style="font-weight: bolder;background-image: url(./images/image.png);background-repeat: no-repeat;padding: 0;margin: 0;background-size: cover;font-family: 'Roboto', sans-serif;opacity: 0.9;height: auto;padding-bottom: 5vw;">
         <center>
-            <h1 style=" color:#042A38;text-transform: uppercase;width: auto;background:#fff;padding: 1vw;">ONLINE
-                Examination System</h1>
+            <h1 style=" color:#042A38;text-transform: uppercase;width: auto;background:#fff;padding: 1vw;">Quizzy</h1>
         </center>
         <center>
             <div class="login">
@@ -73,7 +75,7 @@ $type= $_SESSION["type"]; ?>
                     <form method="post">
                         <label for="otp" style="text-transform: uppercase;">Enter the Code</label><br><br>
                         <input type="number" name="otp1" placeholder=" code" class="inp" required><br><br>
-                        <input name="submit1" class="sub" type="submit" value="Reset" style="height: 3vw;width: 10vw;font-family: 'Courier New', Courier, monospace;font-weight: bolder;border-radius: 10px;border: 2px solid black;background-color: rgb(77, 77, 236);">
+                        <input name="submit1" class="sub" type="submit" value="Reset" style="height: 3vw;width: 10vw;font-family: 'Roboto', sans-serif ;font-weight: bolder;border-radius: 10px;border: 2px solid black;background-color: rgb(77, 77, 236);">
                         <br><br>
                     </form>
                 </div>

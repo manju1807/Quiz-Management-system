@@ -4,10 +4,10 @@
         padding-top: 0.5rem;
     }
 </style>
-<footer class="footer" style= "background: black; opacity: 0.9;  font-size: 1rem; height: 4rem;display:flex;">
+<footer class="footer" style= "background: black; opacity: 0.9;  font-size: 1rem; height: 4rem;display:flex;sss">
     
    
-    <div class="footer_copyright" style=" text-align: center;position:absolute; margin-left:47rem;" >
-             <p>Copyright &copy; QUIZZY 2023" </p>
+    <div class="footer_copyright" style=" text-align: center;position:absolute; margin-left:45rem; color:white;" >
+             <p>Copyright &copy; "QUIZZY 2023" </p>
     </div>
 </footer>

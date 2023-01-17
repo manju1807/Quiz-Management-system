@@ -84,22 +84,27 @@ require_once 'sql.php';
     }
     li {
         margin: 1.5vw;
+        font-size: 1rem !important;
     }
 
     ul {
         list-style: none;
         width: auto !important;
+        font-weight: 2vw !important;
     }
 
     .navbar {
         background-color: #fff!important;
         font-size: 1.5vw;
+        position: fixed;
     }
 
     .navbar>ul>li:hover {
         color: black;
         text-decoration: underline;
         font-weight: bold;
+        cursor: default;
+        cursor: pointer;
 
     }
 
@@ -197,7 +202,7 @@ require_once 'sql.php';
 
     ::placeholder {
         font-weight: bold;
-        font-family: 'Courier New', Courier, monospace;
+        font-family: 'Roboto', sans-serif;
     }
 
     label {
@@ -274,12 +279,14 @@ require_once 'sql.php';
                 color: #fff;
             }
 </style>
-
-<body style="margin: 0 !important;font-weight: bolder !important;font-family: 'Courier New', Courier, monospace;color:#fff !important">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<body style="margin: 0 !important;font-weight: bolder !important;font-family: 'Roboto', sans-serif;color:#fff !important">
     <div style="background-color: #042A38;height: 100%;">
-        <div class="navbar" style="display: inline-flex;width: 100%;color:#042A38;position:fixed;">
-            <section style="margin: 1.5vw;">Quizzy</section>
-            <ul style="display: inline-flex;padding: 0 !important;margin: 0;float: right;right: 0;position: fixed;width: 50vw;">
+    <div class="navbar" style="display: grid;width: 85%;height:3rem;color:#042A38;position:fixed;border-radius:10rem;margin-top:1.5rem;margin-left:6.5rem;">
+        <section style="margin-left: 3rem;display:grid;padding-top: 8px;padding-bottom: 3px; font-size: 1.5rem;">Quizzy</section>
+            <ul style="display: inline-flex;padding: 0 !important;margin-top: 0;float: right;right: 10rem;top:0.8rem;position: fixed;width: 50vw;">
                 <li onclick="dash()">Dashbord</li>
                 <li onclick="prof()">profile</li>
                 <li onclick="score()">Quiz's</li>
@@ -304,8 +311,8 @@ require_once 'sql.php';
                             <label for="ans">Answer &nbsp;</label>
                             <input type="text" name="ans" placeholder="answer" required><br><br>
                         </div>
-                        <input type="submit" name="submit" value="add 1 more question" style="height: 3vw;width: auto;font-family: 'Courier New', Courier, monospace;font-weight: bolder;border-radius: 10px;border: 2px solid black;background-color: lightblue;">
-                        <input type="submit" name="submit1" value="Done" style="height: 3vw;width: auto;font-family: 'Courier New', Courier, monospace;font-weight: bolder;border-radius: 10px;border: 2px solid black;background-color: lightblue;">
+                        <input type="submit" name="submit" value="add 1 more question" style="height: 3vw;width: auto;font-family: 'Roboto', sans-serif;font-weight: bolder;border-radius: 10px;border: 2px solid black;background-color: lightblue;">
+                        <input type="submit" name="submit1" value="Done" style="height: 3vw;width: auto;font-family: 'Roboto', sans-serif;font-weight: bolder;border-radius: 10px;border: 2px solid black;background-color: lightblue;">
                     </form>
                 </center>
             </section>
