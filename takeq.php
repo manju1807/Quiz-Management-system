@@ -17,6 +17,8 @@ require_once 'sql.php';
 <style>
     li {
         margin: 1.5vw;
+        font-size: 1rem !important;
+        font-weight: 2vw !important;
     }
 
     ul {
@@ -27,17 +29,20 @@ require_once 'sql.php';
     .navbar {
         background-color:#fff !important;
         font-size: 1.5vw;
+        position: fixed;
     }
 
     .navbar>ul>li:hover {
-        color: #042A387;
+        color: #042A38;
         text-decoration: underline;
         font-weight: bold;
+        cursor: default;
+        cursor: pointer;
 
     }
 
     .navbar>ul>li>a:hover {
-        color: #042A387;
+        color: #042A38;
         text-decoration: underline;
         font-weight: bold !important;
     }
@@ -46,13 +51,53 @@ require_once 'sql.php';
         text-decoration: none;
         color: #042A38;
     }
-    .prof,#score{
-        top: 3vw;
-        position: fixed;
+    .prof{
+            top: 5vw;
+            position: fixed;
+            width: 35vw !important;
+            height:15vw !important;
+            margin-left: 34vw !important;
+            margin-right: 20vw !important;
+            background-color: #fff !important;
+            border-radius: 10px;
+            margin-top: 0.5rem;
+            z-index: 1;
+            padding: 1vw;
+            padding-left: 1vw;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        img{
+            width: 100%;
+            display:block;
+            object-fit: cover;
+        }
+
+        .container1{
+
+            color: #042A38;
+            font-size:15px;
+            line-height: 0.3rem;
+            grid-column:1;
+        }
+        .container2{
+            width:6rem;
+            height:6rem;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-left: 3rem;  
+            margin-top: 3.5rem;
+            border: 0.1rem solid black;
+            grid-column: 2;
+        }
+        #score{
+            top: 3vw;
+            position: fixed;
             width: 50vw !important;
             margin-left: 25vw !important;
             margin-right: 25vw !important;
-            background-color: #fff !important;
+            background-color: #fff!important;
             display: none !important;
             border-radius: 10px;
             margin-top: 2vw;
@@ -94,7 +139,8 @@ require_once 'sql.php';
         
     }
     #btn{
-        height: 3vw;width: 10vw;font-family: 'Courier New', Courier, monospace;font-weight: bolder;border-radius: 10px;border: 2px solid black;background-color: lightblue;
+     
+        height: 3vw;width: 10vw;font-family: 'Roboto', sans-serif;font-weight:bolder;border-radius: 10px;border: 2px solid black;background-color: lightblue;
     }
     table{
         width: 90vw;
@@ -123,12 +169,14 @@ require_once 'sql.php';
         color: #042A38;
             }
 </style>
-
-<body style="margin: 0 !important;font-weight: bolder !important;font-family: 'Courier New', Courier, monospace;color: #fff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<body style="margin: 0 !important;font-weight: bolder !important;font-family: 'Roboto', sans-serif;color: #fff">
     <div style="background-color: #042A38;height: auto;">
-        <div class="navbar" style="display: inline-flex;width: 100%;color:#042A38;position:fixed;">
-            <section style="margin: 1.5vw;">Quizzy</section>
-            <ul style="display: inline-flex;padding: 0 !important;margin: 0;float: right;right: 0;position: fixed;width: 50vw;">
+    <div class="navbar" style="display: grid;width: 85%;height:3rem;color:#042A38;position:fixed;border-radius:10rem;margin-top:1.5rem;margin-left:6.5rem;font-weight:bolder;">
+    <section style="margin-left: 3rem;display:grid;padding-top: 8px;padding-bottom: 3px; font-size: 1.5rem;">Quizzy</section>
+    <ul style="display: inline-flex;padding: 0 !important;margin-top: 0;float: right;right: 10rem;top:0.8rem;position: fixed;width: 50vw;">
                 <li onclick="dash()">Dashbord</li>
                 <li onclick="prof()">profile</li>
                 <li onclick="score()">Score</li>
@@ -247,12 +295,12 @@ require_once 'sql.php';
 <?php
 echo '<script>'.
 "function prof(){".
-"document.getElementById(\"prof\").style=\"display: block !important;\";".
+"document.getElementById(\"prof\").style=\"display: grid !important;\";".
 "document.getElementById(\"score\").style=\"display: none !important;\";".
 "}".
 "function score(){".
 "document.getElementById(\"prof\").style=\"display: none !important;\";".
-"document.getElementById(\"score\").style=\"display: block !important;\";".
+"document.getElementById(\"score\").style=\"display: grid !important;\";".
 "}".
 "function dash(){".
     "document.getElementById(\"prof\").style=\"display: none !important;\";".

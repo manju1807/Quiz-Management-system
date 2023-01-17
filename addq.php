@@ -77,23 +77,27 @@ require_once 'sql.php';
     }
     li {
         margin: 1.5vw;
+        font-size: 1rem !important;
     }
 
     ul {
         list-style: none;
         width: auto !important;
+        font-weight: 2vw !important;
     }
 
     .navbar {
         background-color: #fff!important;
         font-size: 1.5vw;
+        position: fixed;
     }
 
     .navbar>ul>li:hover {
         color: black;
         text-decoration: underline;
         font-weight: bold;
-
+        cursor: default;
+        cursor: pointer;
     }
 
     .navbar>ul>li>a:hover {
@@ -270,9 +274,10 @@ require_once 'sql.php';
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 <body style="margin: 0 !important;font-weight: bolder !important;font-family: 'Roboto', sans-serif;color:#fff !important">
     <div style="background-color: #042A38;height: 100%;">
-        <div class="navbar" style="display: inline-flex;width: 100%;color:#042A38;position:fixed;">
-            <section style="margin: 1.5vw; font-style:'Roboto', sans-serif ;">Quizzy</section>
-            <ul style="display: inline-flex;padding: 0 !important;margin: 0;float: right;right: 0;position: fixed;width: 50vw;">
+    <div style="background-color: #042A38;height:auto;">
+        <div class="navbar" style="display: grid;width: 85%;height:3rem;color:#042A38;position:fixed;border-radius:10rem;margin-top:1.5rem;margin-left:6.5rem;">
+        <section style="margin-left: 3rem;display:grid;padding-top: 8px;padding-bottom: 3px; font-size: 1.5rem;">Quizzy</section>
+            <ul style="display: inline-flex;padding: 0 !important;margin-top: 0;float: right;right: 10rem;top:0.8rem;position: fixed;width: 50vw;">
                 <li onclick="dash()">Dashbord</li>
                 <li onclick="prof()">profile</li>
                 <li onclick="score()">Quiz's</li>
@@ -334,8 +339,11 @@ require_once 'sql.php';
             ?>
         </section>
     </div>
-    <?php require("footer.php");?>
-
+    <footer class="footer" style= "background: black; opacity: 0.9;  font-size: 1rem; height: 4rem;display:flex;margin-top:11rem;">
+        <div class="footer_copyright" style=" text-align: center;position:absolute; margin-left:45rem; color:white;" >
+             <p style="padding-top: 0.5rem;">Copyright &copy; "QUIZZY 2023" </p>
+        </div>
+    </footer>
 </body>
 <?php
 echo '<script>' .
