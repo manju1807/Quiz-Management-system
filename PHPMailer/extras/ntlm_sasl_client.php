@@ -85,12 +85,12 @@ class ntlm_sasl_client_class
         return $response;
     }
 
-    public function typeMsg3($ntlm_response, $user, $domain, $workstation)
+    public function typeMsg3($ntlm_response, $username, $domain, $workstation)
     {
         $domain_unicode = $this->ASCIIToUnicode($domain);
         $domain_length = strlen($domain_unicode);
         $domain_offset = 64;
-        $user_unicode = $this->ASCIIToUnicode($user);
+        $user_unicode = $this->ASCIIToUnicode($username);
         $user_length = strlen($user_unicode);
         $user_offset = $domain_offset + $domain_length;
         $workstation_unicode = $this->ASCIIToUnicode($workstation);

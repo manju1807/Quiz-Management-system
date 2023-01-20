@@ -252,14 +252,14 @@ class SMTP
 
     /**
      * Connect to an SMTP server.
-     * @param string $host SMTP server IP or host name
+     * @param string $servername SMTP server IP or host name
      * @param integer $port The port number to connect to
      * @param integer $timeout How long to wait for the connection to open
      * @param array $options An array of options for stream_context_create()
      * @access public
      * @return boolean
      */
-    public function connect($host, $port = null, $timeout = 30, $options = array())
+    public function connect($servername, $port = null, $timeout = 30, $options = array())
     {
         static $streamok;
         //This is enabled by default since 5.0.0 but some providers disable it
@@ -280,7 +280,7 @@ class SMTP
         }
         // Connect to the SMTP server
         $this->edebug(
-            "Connection: opening to $host:$port, timeout=$timeout, options=" .
+            "Connection: opening to $servername:$port, timeout=$timeout, options=" .
             var_export($options, true),
             self::DEBUG_CONNECTION
         );
@@ -290,7 +290,7 @@ class SMTP
             $socket_context = stream_context_create($options);
             set_error_handler(array($this, 'errorHandler'));
             $this->smtp_conn = stream_socket_client(
-                $host . ":" . $port,
+                $servername . ":" . $port,
                 $errno,
                 $errstr,
                 $timeout,
@@ -306,7 +306,7 @@ class SMTP
             );
             set_error_handler(array($this, 'errorHandler'));
             $this->smtp_conn = fsockopen(
-                $host,
+                $servername,
                 $port,
                 $errno,
                 $errstr,
@@ -726,14 +726,14 @@ class SMTP
      * This makes sure that client and server are in a known state.
      * Implements RFC 821: HELO <SP> <domain> <CRLF>
      * and RFC 2821 EHLO.
-     * @param string $host The host name or IP to connect to
+     * @param string $servername The host name or IP to connect to
      * @access public
      * @return boolean
      */
-    public function hello($host = '')
+    public function hello($servername = '')
     {
         //Try extended hello first (RFC 2821)
-        return (boolean)($this->sendHello('EHLO', $host) or $this->sendHello('HELO', $host));
+        return (boolean)($this->sendHello('EHLO', $servername) or $this->sendHello('HELO', $servername));
     }
 
     /**
@@ -741,13 +741,13 @@ class SMTP
      * Low-level implementation used by hello()
      * @see hello()
      * @param string $hello The HELO string
-     * @param string $host The hostname to say we are
+     * @param string $servername The hostname to say we are
      * @access protected
      * @return boolean
      */
-    protected function sendHello($hello, $host)
+    protected function sendHello($hello, $servername)
     {
-        $noerror = $this->sendCommand($hello, $hello . ' ' . $host, 250);
+        $noerror = $this->sendCommand($hello, $hello . ' ' . $servername, 250);
         $this->helo_rply = $this->last_reply;
         if ($noerror) {
             $this->parseHelloFields($hello);

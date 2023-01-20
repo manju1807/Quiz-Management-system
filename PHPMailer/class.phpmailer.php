@@ -196,7 +196,7 @@ class PHPMailer
      * 'localhost.localdomain'.
      * @var string
      */
-    public $Hostname = '';
+    public $servernamename = '';
 
     /**
      * An ID to be used in the Message-ID header.
@@ -226,7 +226,7 @@ class PHPMailer
      * Hosts will be tried in order.
      * @var string
      */
-    public $Host = 'localhost';
+    public $servername = 'localhost';
 
     /**
      * The default SMTP server port.
@@ -237,10 +237,10 @@ class PHPMailer
 
     /**
      * The SMTP HELO of the message.
-     * Default is $Hostname. If $Hostname is empty, PHPMailer attempts to find
-     * one with the same method described above for $Hostname.
+     * Default is $servernamename. If $servernamename is empty, PHPMailer attempts to find
+     * one with the same method described above for $servernamename.
      * @var string
-     * @see PHPMailer::$Hostname
+     * @see PHPMailer::$servernamename
      */
     public $Helo = '';
 
@@ -1673,13 +1673,13 @@ class PHPMailer
                     throw new phpmailerException($this->lang('extension_missing').'openssl', self::STOP_CRITICAL);
                 }
             }
-            $host = $hostinfo[3];
+            $servername = $hostinfo[3];
             $port = $this->Port;
             $tport = (integer)$hostinfo[4];
             if ($tport > 0 and $tport < 65536) {
                 $port = $tport;
             }
-            if ($this->smtp->connect($prefix . $host, $port, $this->Timeout, $options)) {
+            if ($this->smtp->connect($prefix . $servername, $port, $this->Timeout, $options)) {
                 try {
                     if ($this->Helo) {
                         $hello = $this->Helo;

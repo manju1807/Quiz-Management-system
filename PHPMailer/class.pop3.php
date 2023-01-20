@@ -71,7 +71,7 @@ class POP3
      * @var string
      * @access public
      */
-    public $host;
+    public $servername;
 
     /**
      * POP3 port number.
@@ -129,7 +129,7 @@ class POP3
 
     /**
      * Simple static wrapper for all-in-one POP before SMTP
-     * @param $host
+     * @param $servername
      * @param integer|boolean $port The port number to connect to
      * @param integer|boolean $timeout The timeout value
      * @param string $username
@@ -138,7 +138,7 @@ class POP3
      * @return boolean
      */
     public static function popBeforeSmtp(
-        $host,
+        $servername,
         $port = false,
         $timeout = false,
         $username = '',
@@ -146,7 +146,7 @@ class POP3
         $debug_level = 0
     ) {
         $pop = new POP3;
-        return $pop->authorise($host, $port, $timeout, $username, $password, $debug_level);
+        return $pop->authorise($servername, $port, $timeout, $username, $password, $debug_level);
     }
 
     /**
@@ -154,7 +154,7 @@ class POP3
      * A connect, login, disconnect sequence
      * appropriate for POP-before SMTP authorisation.
      * @access public
-     * @param string $host The hostname to connect to
+     * @param string $servername The hostname to connect to
      * @param integer|boolean $port The port number to connect to
      * @param integer|boolean $timeout The timeout value
      * @param string $username
@@ -162,9 +162,9 @@ class POP3
      * @param integer $debug_level
      * @return boolean
      */
-    public function authorise($host, $port = false, $timeout = false, $username = '', $password = '', $debug_level = 0)
+    public function authorise($servername, $port = false, $timeout = false, $username = '', $password = '', $debug_level = 0)
     {
-        $this->host = $host;
+        $this->host = $servername;
         // If no port value provided, use default
         if (false === $port) {
             $this->port = $this->POP3_PORT;
@@ -199,12 +199,12 @@ class POP3
     /**
      * Connect to a POP3 server.
      * @access public
-     * @param string $host
+     * @param string $servername
      * @param integer|boolean $port
      * @param integer $tval
      * @return boolean
      */
-    public function connect($host, $port = false, $tval = 30)
+    public function connect($servername, $port = false, $tval = 30)
     {
         //  Are we already connected?
         if ($this->connected) {
@@ -221,7 +221,7 @@ class POP3
 
         //  connect to the POP3 server
         $this->pop_conn = fsockopen(
-            $host, //  POP3 Host
+            $servername, //  POP3 Host
             $port, //  Port #
             $errno, //  Error Number
             $errstr, //  Error Message
@@ -234,7 +234,7 @@ class POP3
         if (false === $this->pop_conn) {
             //  It would appear not...
             $this->setError(array(
-                'error' => "Failed to connect to server $host on port $port",
+                'error' => "Failed to connect to server $servername on port $port",
                 'errno' => $errno,
                 'errstr' => $errstr
             ));
