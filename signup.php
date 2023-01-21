@@ -252,7 +252,7 @@ require 'sql.php';
         <link rel="stylesheet" href="style.css">    
     </div>
     <footer class="footer" style= "background: black;opacity: 0.9;font-size: 1rem;height: 3.5rem;display:flex;margin-top:61%;">
-        <div class="footer_copyright" style=" text-align: center;position:absolute; margin-left:42rem; color:white;" >
+        <div class="footer_copyright" style=" text-align: center;position:absolute; margin-left:43rem; color:white;" >
              <p style="padding-top: 0.01rem;">Copyright &copy; Quizzy 23</p>
         </div>
     </footer>

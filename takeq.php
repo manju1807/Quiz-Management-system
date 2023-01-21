@@ -175,7 +175,7 @@ require_once 'sql.php';
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
-<body style="margin: 0 !important;font-weight: bolder !important;font-family: 'Roboto', sans-serif;color: #fff">
+<body style="margin: 0 !important;height:auto;font-weight: bolder !important;font-family: 'Roboto', sans-serif;color: #fff">
     <div style="background-color: #042A38;height: auto;">
     <div class="navbar" style="display: grid;width: 85%;height:3rem;color:#042A38;position:fixed;border-radius:10rem;margin-top:1.5rem;margin-left:6.5rem;font-weight:bolder;">
     <section style="margin-left: 3rem;height:3rem;display:grid;padding-top: 8px;padding-bottom: 3px; font-size: 1.5rem;font-family: 'Libre Baskerville', serif;">Quizzy</section>
