@@ -204,7 +204,7 @@ require_once 'sql.php';
             }
         }
         ?>
-        <section style="margin-top: 4vw;width:80vw;margin-left:10vw;margin-right:10vw"> 
+        <section style="margin-top: 3vw;width:80vw;margin-left:10vw;margin-right:10vw;font-size :1.2em;"> 
         <?php 
         if(isset($_GET["qid"])){
         $qid=$_GET["qid"];
@@ -223,8 +223,8 @@ require_once 'sql.php';
                 $i=1;
                 $j=0;
                 echo "<form method=\"POST\">";
-                echo "<input id=\"btn\" type=\"submit\" name=\"submit\" value=\"Add Questions\"><br><br><br>";
-                echo "</form><br><br>";
+                echo "<input id=\"btn\" type=\"submit\" name=\"submit\" value=\"Add Questions\"><br>";
+                echo "</form>";
 
                 while ($row = mysqli_fetch_assoc($res)) { 
                     echo $i.". ".$row["qs"]."<br>";
@@ -280,7 +280,7 @@ require_once 'sql.php';
     </div>
     <footer class="footer" style= "background: black; opacity: 0.9;  font-size: 1rem; height: 3.5rem;display:flex;">
         <div class="footer_copyright" style=" text-align: center;position:absolute; margin-left:45rem; color:white;" >
-             <p style="padding-top: 0.01rem;">Copyright &copy; "QUIZZY 2023" </p>
+             <p style="padding-top: 0.01rem;">Copyright &copy;Quizzy 2023</p>
         </div>
     </footer>
 </body>
