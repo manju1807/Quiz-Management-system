@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 17, 2023 at 06:05 AM
+-- Generation Time: Jan 21, 2023 at 10:26 AM
 -- Server version: 8.0.31
 -- PHP Version: 8.0.26
 
@@ -81,9 +81,19 @@ INSERT INTO `questions` (`qs`, `op1`, `op2`, `op3`, `answer`, `quizid`) VALUES
 ('/ Assume that integers take 4 bytes.<br>  #include<iostream> <br>    using namespace std; <br>       class Test  { <br>   static int i;<br>    int j;<br>  }; <br>    int Test::i; <br>    int main() { ', '1', '2', '3', '4', 5),
 ('C primiarily developed as..', 'General purpose language', 'Data processing language D.', 'None of the above.', 'System programming language  ', 4),
 ('C programs converted into machine language with the help of..', 'An Editor  ', 'An operating system', ' None of these.', 'A compiler  ', 4),
+('How do you check the type of a variable in Python?', 'type(x)', 'x.type', 'x::type', 'type(x)', 7),
 ('No. of consonant in english language is..', '20', '22', '28', '21', 6),
 ('No. of vowels in english language is..', '3', '4', '7', '5', 6),
 ('Total no of letters in english language is..', '23', '24', '25', '26', 6),
+('What is the correct way to create a variable in Python?', 'variable x = 5', '5 = x', ' x <- 5', 'variable x = 5', 7),
+('What is the data type of a variable that holds a single character in C++?', 'float', ' char', ' int', ' char', 9),
+('What is the default value of a boolean variable in Java?', 'true', ' false', '0', ' false', 8),
+('What is the function of the \"cout\" command in C++?', 'to output data to the screen', ' to input data from the keyboa', 'to store data in a variable', 'to output data to the screen', 9),
+('What is the keyword used to define a variable in Java?', 'let', 'int', 'val', 'int', 8),
+('What is the main method in Java?', 'main()', 'start()', 'run()', 'main()', 8),
+('What is the output of the following Python code? x=5 y=3 print(x+y)', '8', '18', '5', '8', 7),
+('What is the purpose of the \"import\" statement in Java?', 'To define global variables', 'To run the program', ' To include external libraries', ' To include external libraries', 8),
+('What is the purpose of the \"include\" command in C++?', 'to output data to the screen', 'to create new variables', ' to include other files in the', ' to include other files in the', 9),
 ('When a copy constructor may be called?', 'When an object of the class is', 'When an object of the class is', 'When an object is constructed ', 'All of the above', 5),
 ('Which of the following functions must use reference.', 'Assignment operator function', 'Destructor', 'Parameterized constructor', 'Copy Constructor', 5),
 ('Which of the following is FALSE about references in C++', 'References cannot be NULL', 'A reference must be initialize', 'Once a reference is created, i', 'References cannot refer to con', 5),
@@ -105,16 +115,16 @@ CREATE TABLE IF NOT EXISTS `quiz` (
   `mail` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`quizid`),
   KEY `mail` (`mail`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `quiz`
 --
 
 INSERT INTO `quiz` (`quizid`, `quizname`, `date_created`, `mail`) VALUES
-(4, 'c quiz', '2019-11-18 16:13:50', 'BHATVINAYAK94@GMAIL.COM'),
-(5, 'c++ quiz', '2019-11-18 16:17:13', 'rakeshmr723@gmail.com'),
-(6, 'english', '2019-11-18 17:04:12', 'BHATVINAYAK94@GMAIL.COM');
+(7, 'python', '2023-01-21 10:00:16', 'manju@gmail.com'),
+(8, 'java', '2023-01-21 10:06:34', 'anu@gmail.com'),
+(9, 'c++', '2023-01-21 10:11:12', 'anushree9019@gmail.com');
 
 --
 -- Triggers `quiz`
@@ -142,16 +152,14 @@ CREATE TABLE IF NOT EXISTS `score` (
   PRIMARY KEY (`slno`),
   KEY `quizid` (`quizid`),
   KEY `mail` (`mail`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `score`
 --
 
 INSERT INTO `score` (`slno`, `score`, `quizid`, `mail`, `totalscore`, `remark`) VALUES
-(13, 6, 5, 'rakeshmariyaplar1@gmail.com', 6, 'good'),
-(14, 2, 4, 'rakeshmariyaplar1@gmail.com', 3, 'good'),
-(15, 3, 4, 'rmanjunath7692@gmail.com', 3, 'good');
+(17, 3, 7, 'anandvs@gmail.com', 3, 'good');
 
 --
 -- Triggers `score`
@@ -188,9 +196,9 @@ CREATE TABLE IF NOT EXISTS `staff` (
 --
 
 INSERT INTO `staff` (`staffid`, `name`, `mail`, `phno`, `gender`, `DOB`, `pw`, `dept`) VALUES
+('103', 'anu', 'anu@gmail.com', '9876543210', 'F', '2002-09-19', 'raNVgEH7z4B6.', 'CSE'),
 ('101', 'Anushree', 'anushree9019@gmail.com', '9019247975', 'F', '2002-03-19', 'raNVgEH7z4B6.', 'CSE'),
-('svit1', 'B G VINAYAK', 'BHATVINAYAK94@GMAIL.COM', '9740834260', 'M', '1999-09-23', 'ral7gku4rfhLk', 'CSE'),
-('123', 'Rakesh M R', 'rakeshmr723@gmail.com', '9901735897', 'M', '1999-10-07', 'rajJYeVNCiGD2', 'ISE');
+('102', 'manju', 'manju@gmail.com', '9876543210', 'M', '2002-07-18', 'rayD.ut57ldEo', 'CSE');
 
 -- --------------------------------------------------------
 
@@ -220,11 +228,9 @@ CREATE TABLE IF NOT EXISTS `student` (
 --
 
 INSERT INTO `student` (`usn`, `name`, `mail`, `phno`, `gender`, `DOB`, `pw`, `dept`) VALUES
-('1va17cs010', 'B G VINAYAK', 'BHATVINAYAK94@GMAIL.COM', '9740834260', 'M', '1999-09-23', 'ral7gku4rfhLk', 'CSE'),
-('1va17cs140', 'Rakesh Mariyaplar', 'rakeshmariyaplar1@gmail.com', '6360300095', 'M', '1999-10-07', 'rajJYeVNCiGD2', 'CSE'),
-('1va17cs040', 'Rakesh M R', 'rakeshmr723@gmail.com', '9901735897', 'M', '2000-10-07', 'rajJYeVNCiGD2', 'CSE'),
-('1KS20CS054', 'Manjunath R', 'rmanjunath7692@gmail.com', '6363358647', 'M', '2002-07-18', 'rayD.ut57ldEo', 'CSE'),
-('1va17cs051', 'Siddhanth Sipoliya', 'siddhanthsipoliya@saividya.ac.', '7619360459', 'M', '1999-11-15', 'ray.whoA8HjCQ', 'CSE');
+('1KS20CS009', 'anand', 'anandvs@gmail.com', '9445311335', 'M', '2000-02-14', 'raHc5sjVA0ZiE', 'CSE'),
+('1KS20CS010', 'apeksha', 'apeksha17@gmail.com', '9876543210', 'F', '2002-02-14', 'raqoqnGMzGI.o', 'CSE'),
+('1KS20CS054', 'Manjunath R', 'rmanjunath7692@gmail.com', '6363358647', 'M', '2002-07-18', 'rayD.ut57ldEo', 'CSE');
 
 --
 -- Constraints for dumped tables
