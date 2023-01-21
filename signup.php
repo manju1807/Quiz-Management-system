@@ -169,11 +169,14 @@ require 'sql.php';
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
 <body style="margin: 0;padding: 0;outline: none;height: 100%;min-height: 100%;color:#042A38;background-color:transparent;">
     <div style="font-family:'Roboto', sans-serif, monospace;margin: 0;padding: 0;background-color: transparent;height: 100%;width: 100%;padding-bottom: 5vw;background-image: url(images/image.png);height: 100px;background-repeat: no-repeat;background-size:cover;">
         <center>
         <center>
-            <h1 class="w3-container" style=" color:#fff;text-transform: uppercase;width: auto;background-color:#000;border: 2px solid black;opacity: 0.7;padding-top:0.2rem;font-family:'Roboto', sans-serif;height:3rem;">Quizzy</h1>
+            <h1 class="w3-container" style=" color:#fff;text-transform: uppercase;width: auto;height:3rem;background-color:#000;border: 2px solid black;opacity: 0.7;padding-top:0.2rem;font-family: 'Libre Baskerville', serif;">Quizzy</h1>
         </center>
         </center>
         <div class="seluser">
