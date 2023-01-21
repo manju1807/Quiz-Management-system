@@ -240,8 +240,12 @@ require 'sql.php';
         </div>
         <center><a href="index.php" style="color:#fff !important;">Cancel</a></center>
         <link rel="stylesheet" href="style.css">    
-        <?php require("footer.php");?>
     </div>
+    <footer class="footer" style= "background: black; opacity: 0.9;  font-size: 1rem; height: 3.5rem;display:flex;">
+        <div class="footer_copyright" style=" text-align: center;position:absolute; margin-left:45rem; color:white;" >
+             <p style="padding-top: 0.01rem;">Copyright &copy; "QUIZZY 2023" </p>
+        </div>
+    </footer>
 </body>
 <script>
     function stud() {

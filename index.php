@@ -102,7 +102,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
 <body style="margin:0;height: 100%;outline:none;color: #042A38 !important;padding-bottom:5vw;">
-    <div class="bg" style="font-weight: bolder;background-image: url(./images/image.png);background-repeat: no-repeat;padding: 0;margin: 0;background-size: cover;font-family:  'Roboto', sans-serif;opacity: 0.9;height: 100%;">
+    <div class="bg" style="font-weight: bolder;background-image: url(./images/image.png);background-repeat: no-repeat;padding: 0;margin: 0;background-size: cover;font-family:  'Roboto', sans-serif;opacity: 0.9;height: 110%;">
         <center>
             <h1 class="w3-container" style=" margin:0;color:#fff;text-transform: uppercase;width: auto;background-color:#000;border: 2px solid black;opacity: 0.7;padding-top:0%;font-family:  'Roboto', sans-serif;">Quizzy</h1>
         </center>
@@ -129,7 +129,11 @@
     </div>
     </center>
     </div>
-    <?php require("footer.php"); ?>
+    <footer class="footer" style= "background: black; opacity: 0.9;  font-size: 1rem; height: 3.5rem;display:flex;">
+        <div class="footer_copyright" style=" text-align: center;position:absolute; margin-left:45rem; color:white;" >
+             <p style="padding-top: 0.01rem;">Copyright &copy; "QUIZZY 2023" </p>
+        </div>
+    </footer>
 </body>
 
 </html>
