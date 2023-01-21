@@ -341,7 +341,7 @@ require_once 'sql.php';
     </div>
     <footer class="footer" style= "background: black; opacity: 0.9;  font-size: 1rem; height: 4rem;display:flex;margin-top:11rem;">
         <div class="footer_copyright" style=" text-align: center;position:absolute; margin-left:45rem; color:white;" >
-             <p style="padding-top: 0.5rem;">Copyright &copy;Quizzy 2023</p>
+             <p style="padding-top: 0.5rem;">Copyright &copy; Quizzy 23</p>
         </div>
     </footer>
 </body>

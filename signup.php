@@ -241,9 +241,9 @@ require 'sql.php';
         <center><a href="index.php" style="color:#fff !important;">Cancel</a></center>
         <link rel="stylesheet" href="style.css">    
     </div>
-    <footer class="footer" style= "background: black; opacity: 0.9;  font-size: 1rem; height: 3.5rem;display:flex;">
+    <footer class="footer" style= "background: black;opacity: 0.9;font-size: 1rem;height: 3.5rem;display:flex;margin-top:61%;">
         <div class="footer_copyright" style=" text-align: center;position:absolute; margin-left:45rem; color:white;" >
-             <p style="padding-top: 0.01rem;">Copyright &copy;Quizzy 2023</p>
+             <p style="padding-top: 0.01rem;">Copyright &copy; Quizzy 23</p>
         </div>
     </footer>
 </body>
