@@ -119,11 +119,18 @@ require 'sql.php';
         font-weight: bolder;
     }
 
-    input,
-    .selc {
+    input {
         width: 30vw !important;
         outline: none;
         height: 3vw;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 1vw;
+    }
+    .selc {
+        width: 30vw !important;
+        outline: none;
+        height: 3.5vw;
         border: 2px solid black;
         border-radius: 10px;
         padding: 1vw;
@@ -162,11 +169,11 @@ require 'sql.php';
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-<body style="margin: 0;padding: 0;outline: none;height: 100%;min-height: 100%;color: #042A38 !important">
-    <div style="font-family:'Roboto', sans-serif, monospace;margin: 0;padding: 0;background-color: #fff;height: 100%;width: 100%;padding-bottom: 5vw;background-image: url(images/image.png);height: 100px;background-repeat: no-repeat;background-size:cover;">
+<body style="margin: 0;padding: 0;outline: none;height: 100%;min-height: 100%;color:#042A38;background-color:transparent;">
+    <div style="font-family:'Roboto', sans-serif, monospace;margin: 0;padding: 0;background-color: transparent;height: 100%;width: 100%;padding-bottom: 5vw;background-image: url(images/image.png);height: 100px;background-repeat: no-repeat;background-size:cover;">
         <center>
         <center>
-            <h1 class="w3-container" style=" color:#fff;text-transform: uppercase;width: auto;background-color:#000;border: 2px solid black;opacity: 0.7;padding-top:0%;font-family:  'Roboto', sans-serif;">Quizzy</h1>
+            <h1 class="w3-container" style=" color:#fff;text-transform: uppercase;width: auto;background-color:#000;border: 2px solid black;opacity: 0.7;padding-top:0.2rem;font-family:'Roboto', sans-serif;height:3rem;">Quizzy</h1>
         </center>
         </center>
         <div class="seluser">
@@ -175,8 +182,8 @@ require 'sql.php';
         <div class="stud" id="stud">
             <center>
 
-                <form name="student" method="POST" style="width: 80vw;background-color:#fff;"><br>
-                    <h1 class="formname">Sign-Up as Student</h1><br><br>
+                <form name="student" method="POST" style="width: 80vw;background-color:white;"><br>
+                    <h1 class="formname"style="top-padding:2rem;">Sign-up as student</h1><br><br>
                     <label for="name1">NAME</label><br>
                     <input type="text" name="name1" required><br><br>
                     <label for="usn">USN</label><br>
@@ -209,9 +216,9 @@ require 'sql.php';
         <div class="staff" id="staff">
             <center>
 
-                <form name="staffSIGNUP" method="POST" style="width: 80vw;background-color:#fff;"><br>
+                <form name="staffSIGNUP" method="POST" style="width: 80vw;background-color:white;"><br>
 
-                    <h1 class="formname">Sign-Up as Staff</h1><br><br><label for="name">NAME</label><br>
+                    <h1 class="formname"style="top-padding:2rem;">Sign-up as staff</h1><br><br><label for="name">NAME</label><br>
                     <input type="text" name="name2" required><br><br>
                     <label for="staffid">Staff Id</label><br>
                     <input type="text" name="staffid" required><br><Br>
@@ -242,7 +249,7 @@ require 'sql.php';
         <link rel="stylesheet" href="style.css">    
     </div>
     <footer class="footer" style= "background: black;opacity: 0.9;font-size: 1rem;height: 3.5rem;display:flex;margin-top:61%;">
-        <div class="footer_copyright" style=" text-align: center;position:absolute; margin-left:45rem; color:white;" >
+        <div class="footer_copyright" style=" text-align: center;position:absolute; margin-left:42rem; color:white;" >
              <p style="padding-top: 0.01rem;">Copyright &copy; Quizzy 23</p>
         </div>
     </footer>
