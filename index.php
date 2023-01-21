@@ -124,7 +124,7 @@
                         <input name="login" class="sub" type="submit" value="Login" style="height: 3vw;width: 10vw;font-family:'Roboto', sans-serif ;font-weight: bolder;border-radius: 10px;border: 2px solid black;background-color:lightblue"><br>
 
                 </form><br>
-                <a href="reset.php">Forgot password?</a> &nbsp; New user! <a href="signup.php">SIGN UP</a>
+                 &nbsp; New user! <a href="signup.php">SIGN UP</a>
             </div>
     </div>
     </center>
