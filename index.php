@@ -1,6 +1,5 @@
 <?php session_start(); ?>
 <html>
-
 <head>
     <title>QUIZZY</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -71,25 +70,20 @@
         font-weight: bold;
         font-family: 'Roboto', sans-serif;
     }
-
     label {
         font-weight: bolder;
         font-size: 1.5vw;
     }
-
     form {
         font-size: 1.2vw;
         margin: 0;
     }
-
     button:hover {
         background-color: #fff !important;
     }
-
     .bg {
         background-size: 100%;
     }
-
     a {
         color: #042A38;
     }
