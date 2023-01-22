@@ -205,9 +205,9 @@ require_once 'sql.php';
         }
         ?>
         <section style="margin-top: 4vw;width:80vw;margin-left:10vw;margin-right:10vw;font-size:1.2rem;"> 
-        <?php 
-        if(isset($_GET["qid"])){
-        $qid=$_GET["qid"];
+        <?php
+            if(isset($_GET["qid"])){
+            $qid=$_GET["qid"];
             $sql ="select * from questions where quizid='{$qid}'";
             $res=mysqli_query($conn,$sql);
             if($res)
@@ -218,30 +218,32 @@ require_once 'sql.php';
                     echo "No questions found under this quiz please come later";
                 }else{
                 $i=1;
-                $j=0;
-                echo "<form method=\"POST\">";
+                $score = 0;
+                $answers = array();
+                echo "<form method='POST'>";
                 while ($row = mysqli_fetch_assoc($res)) { 
-                    echo $i.". ".$row["qs"]."<br>";
-                    echo "<input type=\"radio\" value=\"".$j."\" name=\"ans".$i.$j."\">".$row["op1"]."<br>";
-                    echo "<input type=\"radio\" value=\"".($j+1)."\" name=\"ans".$i.$j."\">".$row["op2"]."<br>";               
-                    echo "<input type=\"radio\" value=\"".($j+2)."\"name=\"ans".$i.$j."\">".$row["op3"]."<br>";               
-                    echo "<input type=\"radio\"value=\"".($j+3)."\" name=\"ans".$i.$j."\">".$row["answer"]."<br><br>";  
-                    $i++;                            
+                echo $i.". ".$row["qs"]."<br>";
+                $options = array($row["op1"], $row["op2"], $row["op3"]);
+                shuffle($options);
+                $answers[$i] = $row["answer"];
+                for($j = 0; $j < 3; $j++) {
+                echo "<input type='radio' name='ans".$i."' value='".$options[$j]."'>".$options[$j]."<br>";
                 }
-                echo "<input id=\"btn\" type=\"submit\" name=\"submit\" value=\"submit\"><br><br><br>";
+                $i++; 
+                }
+                echo "<input id='btn' type='submit' name='submit' value='submit'><br><br><br>";
                 echo "</form><br><br>";
-            }
+                }
             }
             else
             {
                 echo "error".mysqli_error($conn).".";
             }
             if(isset($_POST["submit"])){
-                global $score;
                 for($i=1;$i<=$count;$i++)
                 {
-                    if(isset($_POST["ans".$i.$j]) && $_POST["ans".$i.$j]==3){
-                        $score++;
+                    if(isset($_POST["ans".$i]) && trim($_POST["ans".$i])==trim($answers[$i])){
+                    $score++;
                     }
                 }
                 echo "<script>alert(\"u scored ".$score." out of ".$count."\");</script>";
@@ -254,8 +256,9 @@ require_once 'sql.php';
                 }else{
                     echo "<script>alert(\"error occured updating score in database".mysqli_error($conn)."\");</script>";
                 }
-        }
-     } ?>
+            }
+        } 
+        ?>
         </section>
         <section class="prof" id="prof" style="display: none;color:#042A38;">
         <div class="container1">
