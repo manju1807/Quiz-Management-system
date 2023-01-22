@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 21, 2023 at 10:26 AM
+-- Generation Time: Jan 22, 2023 at 10:27 AM
 -- Server version: 8.0.31
 -- PHP Version: 8.0.26
 
@@ -152,14 +152,15 @@ CREATE TABLE IF NOT EXISTS `score` (
   PRIMARY KEY (`slno`),
   KEY `quizid` (`quizid`),
   KEY `mail` (`mail`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `score`
 --
 
 INSERT INTO `score` (`slno`, `score`, `quizid`, `mail`, `totalscore`, `remark`) VALUES
-(17, 3, 7, 'anandvs@gmail.com', 3, 'good');
+(22, 3, 7, 'anandvs@gmail.com', 3, 'good'),
+(23, 3, 8, 'apeksha17@gmail.com', 4, 'good');
 
 --
 -- Triggers `score`
