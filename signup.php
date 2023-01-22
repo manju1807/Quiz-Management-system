@@ -268,4 +268,5 @@ require 'sql.php';
         document.getElementById('staff').style = "display:initial";
     }
 </script>
+
 </html>

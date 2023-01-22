@@ -383,5 +383,4 @@ echo "window.location.replace(\"index.php\");" .
 
     "</script>";
 ?>
-
 </html>
