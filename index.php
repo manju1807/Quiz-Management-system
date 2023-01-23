@@ -6,7 +6,8 @@
 		 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
 </head><?php
         if (isset($_POST['login'])) {
-            if (isset($_POST['usertype']) && isset($_POST['username']) && isset($_POST['pass'])) {        require_once 'sql.php';
+            if (isset($_POST['usertype']) && isset($_POST['username']) && isset($_POST['pass'])) {        
+                require_once 'sql.php';
                 $conn = mysqli_connect($servername, $username, $password, $dbname);if (!$conn) {
                     echo "<script>alert(\"Database error retry after some time !\")</script>";
                 }
